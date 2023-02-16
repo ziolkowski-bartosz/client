@@ -6,31 +6,16 @@ import ReorderIcon from "@mui/icons-material/Reorder";
 
 function Navbar() {
 
-    const [openLinks, setOpenLinks] = useState(false)
+  const [openLinks, setOpenLinks] = useState(false)
 
-    return (
-      <div className="navbar">
-        <div className="leftSide">
-          <img src={Logo} />
-                <div className="hiddenLinks">
-                <Link to="/">Home</Link>
-            <Link to="/about">About us</Link>
-            <Link to="/menu">Menu</Link>
-            <Link to="/cart">Cart</Link>    
-                    </div>
-          </div>
-          <div className="rightSide">
-            <Link to="/">Home</Link>
-            <Link to="/about">About us</Link>
-            <Link to="/menu">Menu</Link>
-            <Link to="/cart">Cart</Link>
-         
-          <button>
-            <ReorderIcon />
-          </button>
-        </div>
-      </div>
-    );
+  return (
+    <div className="navbar">
+          <Link to="/">Home</Link>
+          <Link to="/about">About us</Link>
+          <Link to="/menu">Menu</Link>
+          <Link to="/cart">Cart</Link>
+    </div>
+  );
 }
 
 export default Navbar;
