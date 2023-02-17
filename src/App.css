@@ -1,9 +1,9 @@
 .App {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   align-items: center;
 }
 
@@ -11,10 +11,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 #root {
   width: 100%;
-  background-image: url("./assets/background_image.jpg");
-  background-size: cover;
+  background-color: 	#FCBD11;
 }

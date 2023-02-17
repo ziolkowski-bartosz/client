@@ -1,3 +1,15 @@
-h1.home-h1 {
-    line-height: 100vh;
+h2.home-h2 {
+    text-align: center;
+}
+
+.home-area {
+    min-height:150vh;
+    margin: 15px;
+    margin-top: -55px;
+    margin-bottom: 40px;
+    position:sticky;
+    border-radius: 20px;
+    width: 90%;
+    background-color: #E5E5E5;
+    z-index: 2;
 }
