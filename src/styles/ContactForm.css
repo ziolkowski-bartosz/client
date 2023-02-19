@@ -9,9 +9,15 @@
     background-image: url("../assets/background_image.jpg");
     background-repeat: no-repeat;
     background-size:cover;
+    border-radius: 20px;
 }
 
-
+.col, .col-6 {
+    margin: 15px;
+    margin-left: 0;
+    color: white;
+    margin-right: 0;
+}
 
 
 
@@ -31,6 +37,13 @@
   line-height: 50px;
   text-align: center;
   transition: 0.3s;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.ContactForm > h2 {
+    color: white;
+    text-align: center;
 }
 
 .submit-btn:hover {
@@ -44,4 +57,8 @@
     min-width: 120px;
     padding: 0 25px;
   }
+}
+
+.input {
+    color: white;
 }

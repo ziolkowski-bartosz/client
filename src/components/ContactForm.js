@@ -49,6 +49,7 @@ const ContactForm = () => {
 
     return (
         <div className="ContactForm">
+            <h2>Feel free to contact us</h2>
             <div className="form-container">
                 <div className="row">
                     <div className="col-12 text-center">
@@ -58,7 +59,6 @@ const ContactForm = () => {
                                 onSubmit={handleSubmit(onSubmit)}
                                 noValidate
                             >
-                                {/* Row 1 of form */}
                                 <div className="row formRow">
                                     <div className="col-6">
                                         <input
