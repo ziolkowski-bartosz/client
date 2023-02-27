@@ -1,22 +1,25 @@
 .ContactForm {
-    position: absolute;
-    width: 40%;
-    bottom: 5%;
-    left: 50%;
-    padding: 20px;
-    margin: 20px;
-    transform: translateX(-50%);
-    background-image: url("../assets/background_image.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 20px;
+  position: relative;
+  width: 40%;
+  padding: 20px;
+  left: 50%;
+  margin: 100px 0 100px 0;
+  transform: translateX(-50%);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #dbcf5c;
 }
 
-.col, .col-6 {
-    margin: 15px;
-    margin-left: 0;
-    color: white;
-    margin-right: 0;
+
+.col,
+.col-6 {
+  margin: 15px;
+  margin-left: 0;
+  color: white;
+  margin-right: 0;
 }
 
 
@@ -41,15 +44,19 @@
   margin-bottom: 13px;
 }
 
-.ContactForm > h2 {
-    color: white;
-    text-align: center;
+.ContactForm>h2 {
+  color: brown;
+  font-family: 'Pacifico';
+  text-align: center;
+  letter-spacing: 4px;
+  transition: 0.3s;
 }
 
 .submit-btn:hover {
-  background-color: #DFD855;
-  color: black;
+  background-color: #FF6B21;
+  color: white;
 }
+
 
 
 @media (min-width: 768px) {
@@ -60,5 +67,5 @@
 }
 
 .input {
-    color: white;
+  color: white;
 }

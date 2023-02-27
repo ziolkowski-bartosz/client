@@ -1,19 +1,17 @@
 .header {
     width: 100%;
     height: 55vh;
-    background-image: url("https://cdn.hovia.com/app/uploads/black-and-white-wavy-chequered-aesthetic-pattern-wallpaper-mural-Plain-820x532.jpg");
+    background-color:#F1592A;
 }
 
 .header-image {
     width: 50%;
     height: 55vh;
-      background: white;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 50%, transparent 0),
-    linear-gradient(rgba(0,0,0,.3) 50%, transparent 0);
   background-size: 30px 30px;
-  background-image: url("https://t4.ftcdn.net/jpg/04/30/72/35/360_F_430723508_DD8597qkSnXgG2xOAlABsgYNSFtPPCjT.jpg");
-  background-repeat: no-repeat;
+ background-color: #dbcf5c;
+background-repeat: no-repeat;
   background-size: cover;
+  background-color: #F4A139;
 }
 
 .header-meal-image {
@@ -33,6 +31,7 @@
     width: 20%;
     padding: 0;
     margin-left: 11%;
+    
     margin-top: 10px;
 }
 
