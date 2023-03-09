@@ -13,15 +13,16 @@ const ContactForm = () => {
     } = useForm();
 
     const toastifySuccess = () => {
-        toast("Form sent!", {
-            position: "bottom-right",
-            autoClose: 5000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: false,
-            className: "submit-feedback success",
-            toastId: "notifyToast",
+        toast("Form has just been sent!", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          toastId: "notifyToast",
         });
     };
 
@@ -35,10 +36,10 @@ const ContactForm = () => {
                 message,
             };
             await emailjs.send(
-                process.env.REACT_APP_SERVICE_ID,
-                process.env.REACT_APP_TEMPLATE_ID,
-                templateParams,
-                process.env.REACT_APP_USER_ID
+              "service_l1cwcfi",
+              "emailTemplate",
+              templateParams,
+              "VnjdbR45Z1tYUomNg"
             );
             reset();
             toastifySuccess();

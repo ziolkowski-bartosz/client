@@ -9,4 +9,5 @@ import image8 from "../assets/meals_photos/chlodnik_litewski.jpg";
 import image9 from "../assets/meals_photos/eklery.jpg";
 
 
-export default [image1, image2, image3, image4, image5, image6, image7, image8, image9];
+export let homeSlider = [image1, image2, image3, image4, image5, image6, image7, image8, image9];
+

@@ -10,8 +10,8 @@ h2.home-h2 {
     margin-bottom: 40px;
     border-radius: 20px;
     background-image: url("../assets/pexels-karolina-grabowska-4084936.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 5px;
 }
 
