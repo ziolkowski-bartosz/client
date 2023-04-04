@@ -1,0 +1,51 @@
+.header {
+    width: 100%;
+    height: 55vh;
+    background-color:#F1592A;
+}
+
+.header-image {
+    width: 50%;
+    height: 55vh;
+  background-size: 30px 30px;
+ background-color: #dbcf5c;
+background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F4A139;
+}
+
+.header-meal-image {
+    position: absolute;
+    top: 10%;
+    width: 20%;
+    padding: 0;
+    margin-left: 9%;
+    margin-top: 10px;
+
+}
+
+.header-second-meal-image {
+    position: absolute;
+    top: 10%;
+    right: 9%;
+    width: 20%;
+    padding: 0;
+    margin-left: 11%;
+    
+    margin-top: 10px;
+}
+
+.slogan {
+    position: absolute;
+    top: 19%;
+    left: 36.5%;
+    width: 27%;
+    font-family: 'Pacifico';
+    background-color: #DFD855;
+    letter-spacing: 4px;
+    text-align: center;
+    height: 15vh;
+    line-height: 7vh;
+    color: brown;
+    border-radius: 20px;
+}

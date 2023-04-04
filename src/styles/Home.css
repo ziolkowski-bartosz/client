@@ -1,3 +1,116 @@
-h1.home-h1 {
-    line-height: 100vh;
+h2.home-h2 {
+    text-align: center;
+    margin: 100px;
 }
+
+.home-area {
+    min-height:150vh;
+    margin: 15px;
+    margin-top: -70px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    background-image: url("../assets/pexels-karolina-grabowska-4084936.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5px;
+}
+
+.home-carousel {
+    width: 100%;
+}
+
+.pl-flag {
+    height: 40px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: auto;
+    display: inline;
+}
+
+.home-typing {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0px;
+    padding-top: 20px;
+    height: 45px;
+    margin-bottom: 0px;
+}
+
+.home-services {
+    width: 80%;
+    height: 35vh;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 40px;
+    text-align: center;
+    gap:2rem;
+}
+
+
+.home-service {
+    background: #fff;
+    margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+   flex: 20%;
+   display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e7e7e7;
+  transition: all 0.3s ease;
+    text-align: center;
+    flex-direction: column;
+}
+
+.awesome-icon {
+  font-size: 3.45rem;
+  margin: 1rem 0;
+}
+
+
+.service1:hover {
+  border: 2px solid #42b7ca;
+}
+
+.service2:hover {
+  border: 2px solid #425fca;
+}
+
+.service3:hover {
+  border: 2px solid #9c42ca;
+}
+
+.home-service:hover {
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.home-services > section > p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.home-service h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #4A78A8;
+  font-size: 1.3rem;
+  margin: 1rem 0 0.6rem;
+}
+
+.carousel-item {
+    padding: 40px;
+    min-height: 40rem;
+    min-width: 30rem;
+    margin-left: 100px;
+}
+
+.carousel-item img {
+    width: 10%;
+    height: 100%;
+    border-radius: 20px;
+    pointer-events: none;
+    background-color: lightblue;
+}
+
+

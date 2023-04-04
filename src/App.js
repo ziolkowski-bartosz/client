@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Menu from "./pages/Menu";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
+import AnimatedRoutes from './components/AnimatedRoutes';
+
 
 function App() {
 
@@ -12,10 +12,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/menu" element={<Menu />} />
-        </Routes>
+        <AnimatedRoutes/>
         <Footer />
       </Router>
     </div>
