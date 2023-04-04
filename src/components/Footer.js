@@ -1,52 +1,48 @@
+import "../assets/styles/Footer.css";
+
+import { Link } from "react-router-dom";
 import React from "react";
-import "../styles/Footer.css";
-import Logo from "../assets/polenix_logo.png";
+import polenixLogo from "../assets/images/polenixLogo.png";
 
-const Footer = () => {
+function Footer() {
   return (
-    <div className="footer">
-      <div className="footer-logo">
-        <img src={Logo} />
-      </div>
-      <p className="footer-slogan">
-        Anker Engelunds Vej 1 Bygning 101A, 2800 Kgs. Lyngby
-      </p>
-      <ul class="socials">
-        <li style={{"margin-left": "-10px"} }>
-          <a href="#">
+    <div className="footer-container">
+      <img className="footer-logo" src={polenixLogo} alt="polenix logo" />
+      <p>Anker Engelunds Vej 1 Bygning 101A, 2800 Kgs. Lyngby</p>
+      <ul class="footer-socials">
+        <li>
+          <Link to="/">
             <i class="fa fa-facebook"></i>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="/">
             <i class="fa fa-twitter"></i>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="/">
             <i class="fa fa-instagram"></i>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="/">
             <i class="fa fa-youtube"></i>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="/">
             <i class="fa fa-linkedin-square"></i>
-          </a>
+          </Link>
         </li>
       </ul>
-      <p className="footer-second-slogan footer-slogan">
-        Let us make you feel at Poland
-      </p>
+      <p>Let us make you feel at Poland</p>
     </div>
   );
-};
+}
 
 export default Footer;

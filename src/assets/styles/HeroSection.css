@@ -1,0 +1,26 @@
+.header {
+  height: 55vh;
+
+  background: linear-gradient(90deg, #f4a139 50%, #f1592a 50%);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: calc(100% - 4.4rem);
+}
+
+.header-img {
+  width: 20%;
+}
+
+.header-slogan {
+  width: 27%;
+  border-radius: 1.25rem;
+
+  line-height: 7.5vh;
+
+  background-color: #dfd855;
+}

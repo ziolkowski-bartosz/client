@@ -1,8 +1,8 @@
-import React from 'react'
-import MenuPage from "../components/Menu";
+import React from "react";
+import RestaurantMenu from "../components/Menu";
 
-const Menu = () => {
-    return <MenuPage />;
+function Menu() {
+  return <RestaurantMenu />;
 }
 
-export default Menu
+export default Menu;

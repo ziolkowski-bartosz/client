@@ -1,21 +1,20 @@
-import './App.css';
-import React from 'react';
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { BrowserRouter as Router} from "react-router-dom";
-import AnimatedRoutes from './components/AnimatedRoutes';
+import "../src/assets/styles/App.css";
 
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import SiteContent from "./components/SiteContent";
 
 function App() {
-
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Navbar />
-        <AnimatedRoutes/>
+        <SiteContent />
         <Footer />
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 
