@@ -1,20 +1,14 @@
-import React from 'react'
-import HomeLayout from "../components/Home";
-import Header from '../components/Header';
-import { motion } from "framer-motion";
+import Header from "../components/HeroSection";
+import MainContent from "../components/MainContent";
+import React from "react";
 
-const Home = () => {
+function Home() {
   return (
-    <motion.div
-      className="home-motion-div"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <>
       <Header />
-      <HomeLayout />
-    </motion.div>
+      <MainContent />
+    </>
   );
 }
 
-export default Home
+export default Home;

@@ -1,0 +1,105 @@
+.home-container {
+  min-height: 150vh;
+  margin: -4.4rem 1rem 2.5rem;
+  border-radius: 1.25rem;
+
+  text-align: center;
+
+  background-image: url("../images/pierogi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-typewriter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 5rem;
+
+  font-size: 2rem;
+  text-align: center;
+}
+
+.home-services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 33vh;
+}
+
+.home-service {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: calc(100% / 3 - 3.75rem);
+
+  height: 100%;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+
+  background: #fff;
+  border: 2px solid #e7e7e7;
+
+  transition: all 0.3s ease;
+}
+
+.service-icon {
+  margin: 1rem 0;
+
+  font-size: 3.45rem;
+}
+
+.service1:hover {
+  border: 3px solid #42b7ca;
+}
+
+.service2:hover {
+  border: 3px solid #425fca;
+}
+
+.service3:hover {
+  border: 3px solid #9c42ca;
+}
+
+.home-service:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.home-service h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+
+  color: #4a78a8;
+}
+
+.home-service p {
+  margin: 1rem 0;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.home-carousel-slogan {
+  margin: 6.25rem;
+}
+
+.pl-flag {
+  width: auto;
+  height: 2.5rem;
+  margin-left: 0.8rem;
+}
+
+.home-carousel {
+  width: 100%;
+}
+
+.home-forms-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  min-height: 62vh;
+  padding: 4.5rem;
+}
