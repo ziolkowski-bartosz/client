@@ -14,14 +14,14 @@ const Menu = () => {
     }, []);
 
     return (
-        <>
-            <h1>Meals</h1>
-            <div className='menu'>
-                {listOfMeals.map((meal) => {
-                    return <Meal name={meal.name} />;
-                })}
-            </div>
-        </>
+        <div className="menu-area">
+          <h1>Meals</h1>
+          <div className="menu">
+            {listOfMeals.map((meal) => {
+              return <Meal name={meal.name} />;
+            })}
+          </div>
+        </div>
     );
 }
 
