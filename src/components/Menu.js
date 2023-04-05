@@ -1,28 +1,30 @@
-import React from 'react'
-import Meal from './Meal'
-import "../styles/Menu.css"
-import axios from "axios";
-import { useState, useEffect } from "react";
+import "../assets/styles/Menu.css";
 
-const Menu = () => {
-    const [listOfMeals, setListOfMeals] = useState([]);
+import Food from "./Food";
+import { GET_ALL_FOOD_QUERY } from "../graphql/food";
+import React from "react";
+import { useQuery } from "@apollo/client";
+import { useState } from "react";
 
-    useEffect(() => {
-        axios.get("http://localhost:3001/meals").then((res) => {
-            setListOfMeals(res.data);
-        });
-    }, []);
+function Menu() {
+  const [allFood, setAllFood] = useState([]);
 
-    return (
-        <>
-            <h1>Meals</h1>
-            <div className='menu'>
-                {listOfMeals.map((meal) => {
-                    return <Meal name={meal.name} />;
-                })}
-            </div>
-        </>
-    );
+  useQuery(GET_ALL_FOOD_QUERY, {
+    onCompleted: (data) => {
+      setAllFood(data.getAllFood);
+    },
+  });
+
+  return (
+    <div className="menu-container">
+      <h1 className="form-slogan menu-slogan">Our today menu</h1>
+      <div className="food-listing">
+        {allFood.map((food, index) => {
+          return <Food key={index} food={food} />;
+        })}
+      </div>
+    </div>
+  );
 }
 
-export default Menu
+export default Menu;

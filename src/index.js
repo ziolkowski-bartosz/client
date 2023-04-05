@@ -1,12 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import App from './App';
+import { ApolloProvider } from "@apollo/client";
+import App from "./App";
+import { AuthProvider } from "./context/authContext";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { apolloClient } from "./utils/apolloClient";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <AuthProvider>
+    <React.StrictMode>
+      <ApolloProvider client={apolloClient}>
+        <App />
+      </ApolloProvider>
+    </React.StrictMode>
+  </AuthProvider>
 );
-

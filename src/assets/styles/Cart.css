@@ -1,0 +1,7 @@
+.cart-container {
+  width: 100%;
+  height: calc(100vh - 15.6rem - 4rem);
+
+  line-height: calc(100vh - 15.6rem - 4rem);
+  font-size: 10vh;
+}

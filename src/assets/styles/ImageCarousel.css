@@ -1,0 +1,38 @@
+.carousel-container {
+  width: 25rem;
+  overflow: hidden;
+}
+
+.carousel {
+  white-space: nowrap;
+
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+
+  width: 25rem;
+  border-radius: 2.5rem;
+}
+
+.carousel-control-panel {
+  text-align: center;
+}
+
+.carousel-control {
+  display: inline-block;
+
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 1rem 0.5rem;
+  border-radius: 50%;
+
+  background-color: #c4c4c4;
+
+  cursor: pointer;
+}
+
+.carousel-control.active {
+  background-color: #6a0dad;
+}

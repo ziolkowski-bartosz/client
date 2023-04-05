@@ -1,10 +1,14 @@
-import React from 'react'
-import HomeLayout from "../components/Home";
+import Header from "../components/HeroSection";
+import MainContent from "../components/MainContent";
+import React from "react";
 
-const Home = () => {
+function Home() {
   return (
-    <HomeLayout/>
+    <>
+      <Header />
+      <MainContent />
+    </>
   );
 }
 
-export default Home
+export default Home;

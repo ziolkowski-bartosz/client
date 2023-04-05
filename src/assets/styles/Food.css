@@ -1,0 +1,81 @@
+.food-container {
+  position: relative;
+
+  flex-basis: 45%;
+
+  margin: 2rem;
+  border-radius: 1.25rem;
+  padding: 1rem;
+
+  background-color: #dfd855;
+
+  transition: 0.3s;
+}
+
+.food-container:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.food-container > .form-group > h2 {
+  width: 100%;
+
+  text-align: center;
+  line-height: 2.5rem;
+  font-weight: 600;
+
+  background-color: #e6e6fa;
+  color: brown;
+}
+
+.food-detail {
+  position: absolute;
+  text-align: center;
+  font-weight: 600;
+  min-width: 15%;
+  line-height: 2.5rem;
+  padding: 0 0.5rem;
+}
+
+.food-price {
+  bottom: 12%;
+  left: 0;
+  background-color: #ff6b21;
+}
+
+.food-quantity {
+  bottom: 0;
+  left: 0;
+  background-color: #bb86fc;
+  border-bottom-right-radius: 1rem;
+}
+
+.food-category {
+  top: 18%;
+  right: 0;
+  background-color: #ffdbac;
+  border-top-left-radius: 1rem;
+  border: 1px solid black;
+}
+
+.food-container > .form-group > img {
+  width: 50%;
+}
+
+.food-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  padding: 1.25rem 0.8rem;
+
+  text-align: center;
+}
+
+.food-info:last-child {
+  font-weight: 600;
+}
+
+.buy-btn:hover {
+  background-color: #ff6b21;
+}
