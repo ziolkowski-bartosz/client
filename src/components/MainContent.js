@@ -101,7 +101,7 @@ function MainContent() {
           currentFigureScale={1}
         >
           {carouselImages.map((img, i) => {
-            return <img src={img} alt="polish food" key={i} />;
+            return <img key={i} src={img} alt="polish food" />;
           })}
         </Coverflow>
       </div>

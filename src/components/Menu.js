@@ -1,26 +1,29 @@
 import "../assets/styles/Menu.css";
 
+import React, { useEffect, useState } from "react";
+
 import Food from "./Food";
 import { GET_ALL_FOOD_QUERY } from "../graphql/food";
-import React from "react";
+import { menuImgs } from "../utils/menuImgs";
 import { useQuery } from "@apollo/client";
-import { useState } from "react";
 
 function Menu() {
-  const [allFood, setAllFood] = useState([]);
+  const { data } = useQuery(GET_ALL_FOOD_QUERY);
+  const [allFood, setAllFood] = useState(data?.getAllFood || []);
 
-  useQuery(GET_ALL_FOOD_QUERY, {
-    onCompleted: (data) => {
+  useEffect(() => {
+    if (data) {
       setAllFood(data.getAllFood);
-    },
-  });
+    }
+  }, [data]);
 
   return (
     <div className="menu-container">
       <h1 className="form-slogan menu-slogan">Our today menu</h1>
       <div className="food-listing">
         {allFood.map((food, index) => {
-          return <Food key={index} food={food} />;
+          const img = menuImgs[index % menuImgs.length];
+          return <Food key={index} food={food} img={img} />;
         })}
       </div>
     </div>

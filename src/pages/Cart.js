@@ -1,13 +1,8 @@
-import "../assets/styles/Cart.css";
-
-import { AuthContext } from "../context/authContext";
 import React from "react";
-import { useContext } from "react";
+import RestaurantCart from "../components/Cart";
 
 function Cart() {
-  const { user } = useContext(AuthContext);
-
-  return <div className="cart-container">{user?.orders || "No items"}</div>;
+  return <RestaurantCart />;
 }
 
 export default Cart;

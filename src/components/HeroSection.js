@@ -2,8 +2,8 @@ import "../assets/styles/HeroSection.css";
 
 import Fade from "react-reveal/Fade";
 import React from "react";
-import chlodikImg from "../assets/images/chlodnikNav.png";
-import kluskiImg from "../assets/images/kluskiNav.png";
+import chlodnikImg from "../assets/images/mealsImgs/chlodnikNav.png";
+import kluskiImg from "../assets/images/mealsImgs/kluskiNav.png";
 
 function HeroSection() {
   return (
@@ -16,7 +16,7 @@ function HeroSection() {
           Polish food is art here, and so do hospitality.
         </h1>
         <Fade right>
-          <img className="header-img" src={chlodikImg} alt="chlodnik" />
+          <img className="header-img" src={chlodnikImg} alt="chlodnik" />
         </Fade>
       </div>
     </div>

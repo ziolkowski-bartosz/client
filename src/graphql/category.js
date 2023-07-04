@@ -16,6 +16,8 @@ export const GET_ALL_CATEGORIES_QUERY = gql`
       name
       food {
         name
+        price
+        quantity
       }
     }
   }
@@ -28,6 +30,8 @@ export const GET_SINGLE_CATEGORY_QUERY = gql`
       name
       food {
         name
+        price
+        quantity
       }
     }
   }

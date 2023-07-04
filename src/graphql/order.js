@@ -8,26 +8,61 @@ export const CREATE_ORDER_MUTATION = gql`
   }
 `;
 
+export const UPDATE_ORDER_MUTATION = gql`
+  mutation UpdateOrder(
+    $orderId: Int!
+    $delivery: Boolean
+    $status: StatusType
+  ) {
+    updateOrder(orderId: $orderId, delivery: $delivery, status: $status) {
+      id
+      status
+      delivery
+    }
+  }
+`;
+
+export const REMOVE_ORDER_MUTATION = gql`
+  mutation RemoveOrder($orderId: Int!) {
+    removeOrder(orderId: $orderId) {
+      id
+    }
+  }
+`;
+
 export const GET_ALL_ORDERS_QUERY = gql`
   query GetAllOrders {
     getAllOrders {
       id
-      food {
-        name
-        price
+      status
+      delivery
+      amount
+      orderItems {
+        food {
+          name
+          price
+          quantity
+        }
+        quantity
       }
-      quantity
     }
   }
 `;
 
 export const GET_SINGLE_ORDER_QUERY = gql`
-  query GetSingleCategory($categoryId: Int!) {
-    getSingleCategory(categoryId: $categoryId) {
+  query GetSingleOrder($orderId: Int!) {
+    getSingleOrder(orderId: $orderId) {
       id
-      name
-      food {
-        name
+      status
+      delivery
+      amount
+      orderItems {
+        food {
+          name
+          price
+          quantity
+        }
+        quantity
       }
     }
   }

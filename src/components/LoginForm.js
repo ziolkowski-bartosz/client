@@ -10,7 +10,7 @@ import { userDataValidation } from "../utils/userDataValidation";
 const StyledLoginForm = styled.form`
   top: calc((70vh - 5.25rem) / 2);
 
-  width: 25%;
+  width: 30%;
   min-height: 30vh;
 `;
 

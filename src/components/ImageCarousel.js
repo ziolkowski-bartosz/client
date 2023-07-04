@@ -36,7 +36,7 @@ function ImageCarousel() {
         style={{ transform: `translate3d(${-sliderIndex * 100}%, 0, 0)` }}
       >
         {images.map((img, index) => (
-          <img className="slide" alt="polish food" key={index} src={img} />
+          <img key={index} src={img} className="slide" alt="polish food" />
         ))}
       </div>
       <div className="carousel-control-panel">

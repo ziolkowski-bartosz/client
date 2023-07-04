@@ -12,35 +12,44 @@ function Footer() {
       <ul class="footer-socials">
         <li>
           <Link to="/">
-            <i class="fa fa-facebook"></i>
+            <i className="fa fa-facebook"></i>
           </Link>
         </li>
 
         <li>
           <Link to="/">
-            <i class="fa fa-twitter"></i>
+            <i className="fa fa-twitter"></i>
           </Link>
         </li>
 
         <li>
           <Link to="/">
-            <i class="fa fa-instagram"></i>
+            <i className="fa fa-instagram"></i>
           </Link>
         </li>
 
         <li>
           <Link to="/">
-            <i class="fa fa-youtube"></i>
+            <i className="fa fa-youtube"></i>
           </Link>
         </li>
 
         <li>
           <Link to="/">
-            <i class="fa fa-linkedin-square"></i>
+            <i className="fa fa-linkedin-square"></i>
           </Link>
         </li>
       </ul>
-      <p>Let us make you feel at Poland</p>
+      <div className="footer-contact">
+        <a href="tel:+4581921935">
+          <i className="fa fa-phone"></i> 81 92 19 35
+        </a>
+        <a href="mailto:hello@polenix.dk">
+          <i className="fa fa-envelope"></i> hello@polenix.dk
+        </a>
+      </div>
+      <p className="footer-slogan">Let us make you feel at Poland</p>
+      <p>© 2023 Polenix. All rights reserved.</p>
     </div>
   );
 }
