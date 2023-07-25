@@ -1,22 +1,51 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  font-family: Helvetica, sans-serif;
-  align-items: center;
-
-  width: 100%;
-  min-height: 100vh;
+:root {
+  --pagination-color: #0e7490;
+  --main-orange-color: #ff6b21;
+  --main-gap: 1.25rem;
 }
 
 body {
   box-sizing: border-box;
+  position: relative;
 
   margin: 0;
   padding: 0;
-}
-
-#root {
-  width: 100%;
 
   background-color: #b1a296;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+p {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+a:hover {
+  color: var(--main-orange-color);
+}
+
+button {
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  overflow-x: hidden;
+
+  font-family: Helvetica, sans-serif;
 }

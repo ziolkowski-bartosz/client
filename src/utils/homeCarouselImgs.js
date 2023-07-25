@@ -4,7 +4,7 @@ import ekleryImg from "../assets/images/mealsImgs/eklery.jpg";
 import frytkiDyniaImg from "../assets/images/mealsImgs/frytkiDynia.jpg";
 import kluskiSlaskieImg from "../assets/images/mealsImgs/kluskiSlaskie.jpg";
 import knedleImg from "../assets/images/mealsImgs/knedle.jpg";
-import openHoursImg from "../assets/images/openHours.png";
+import openHoursImg from "../assets/images/openHours.jpg";
 import plackiCukiniaImg from "../assets/images/mealsImgs/plackiCukinia.jpg";
 import tartaCukiniaImg from "../assets/images/mealsImgs/tartaCukinia.jpg";
 

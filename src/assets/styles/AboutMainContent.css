@@ -1,0 +1,104 @@
+.about-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  width: 80vw;
+  min-height: 85vh;
+}
+
+.about-container:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  display: block;
+  content: "";
+  width: 100%;
+  height: 80%;
+
+  background-image: url("../images/backgrounds/restaurantBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  opacity: 0.3;
+}
+
+.about-slogan {
+  border-radius: var(--main-gap);
+  width: 84%;
+  padding: var(--main-gap);
+
+  font-size: 2.25rem;
+  line-height: 3.5rem;
+
+  background-color: #e6e6fa;
+}
+
+.about-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin: var(--main-gap) auto;
+}
+
+.about-info-container > p {
+  width: 40%;
+  padding: var(--main-gap);
+  border-radius: 0.5rem;
+
+  line-height: 2rem;
+
+  background-color: #dbcf5c;
+}
+
+@media (max-width: 1199px) {
+  .about-container {
+    width: 90vw;
+  }
+
+  .about-slogan {
+    padding: 1rem;
+  }
+
+  .about-info-container {
+    flex-direction: column;
+    gap: var(--main-gap);
+  }
+
+  .about-info-container > p {
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .about-slogan {
+    padding: 0.5rem;
+
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .about-info-container > p {
+    width: 65%;
+
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-slogan {
+    width: 90%;
+
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .about-info-container > p {
+    width: 80%;
+  }
+}

@@ -1,9 +1,15 @@
 .menu-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--main-gap);
+
   width: 80vw;
-  min-height: 100vh;
-  margin: 1.25rem;
-  padding-top: 1.25rem;
-  border-radius: 1.25rem;
+  min-height: 60vh;
+  border-radius: var(--main-gap);
+  margin: var(--main-gap) auto;
+  padding: var(--main-gap);
 
   background-image: url("../images/backgrounds/pierogiBackground.jpg");
   background-repeat: no-repeat;
@@ -11,9 +17,71 @@
   background-position: bottom;
 }
 
+.search-bar > input {
+  line-height: 2.3rem;
+}
+
 .food-listing {
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.food-listing > div {
+  flex-basis: 47%;
+}
+
+@media (max-width: 1500px) {
+  .food-listing > div {
+    flex-basis: 60%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .food-listing > div {
+    flex-basis: 70%;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu-container {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .food-listing > div {
+    flex-basis: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .food-listing > div {
+    flex-basis: 100%;
+  }
+}
+
+ul.py-1 {
+  margin: 0;
+  padding: 0 !important;
+}
+
+ul > li {
+  border-bottom: 0 solid;
+
+  list-style: none;
+}
+
+.menu-container > div.border {
+  border: none !important;
+}
+
+ul > li[role="menuitem"] > button {
+  background-color: #0e7490;
+  color: white;
+}
+
+ul > li[role="menuitem"] > button:hover {
+  background-color: #155e75;
 }

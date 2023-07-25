@@ -1,18 +1,18 @@
 .carousel-container {
-  width: 25rem;
   overflow: hidden;
+  width: 27%;
 }
 
 .carousel {
   white-space: nowrap;
 
-  transition: ease 1000ms;
+  transition: 0.7s;
 }
 
 .slide {
   display: inline-block;
 
-  width: 25rem;
+  width: 100%;
   border-radius: 2.5rem;
 }
 
@@ -23,10 +23,10 @@
 .carousel-control {
   display: inline-block;
 
-  width: 1.25rem;
-  height: 1.25rem;
-  margin: 1rem 0.5rem;
+  width: var(--main-gap);
+  height: var(--main-gap);
   border-radius: 50%;
+  margin: 1rem 0.5rem;
 
   background-color: #c4c4c4;
 
@@ -35,4 +35,28 @@
 
 .carousel-control.active {
   background-color: #6a0dad;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .carousel-container {
+    width: 35%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-container {
+    width: 40%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .carousel-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 599px) {
+  .carousel-container {
+    width: 55%;
+  }
 }

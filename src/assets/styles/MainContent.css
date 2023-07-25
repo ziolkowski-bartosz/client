@@ -1,7 +1,8 @@
 .home-container {
   min-height: 150vh;
-  margin: -4.4rem 1rem 2.5rem;
-  border-radius: 1.25rem;
+  width: calc(100vw - 2.5rem);
+  margin: -4.4rem var(--main-gap) 0;
+  border-radius: var(--main-gap);
 
   text-align: center;
 
@@ -11,38 +12,36 @@
 }
 
 .home-typewriter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 5rem;
-
+  height: fit-content;
+  padding: var(--main-gap);
   font-size: 2rem;
-  text-align: center;
 }
 
 .home-services {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  gap: var(--main-gap);
 
-  height: 33vh;
+  min-height: 33vh;
+
+  padding: 0 2rem;
 }
 
 .home-service {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  flex-basis: calc(100% / 3 - 3.75rem);
+  flex-grow: 1;
 
-  height: 100%;
-  padding: 1.25rem;
-  border-radius: 1.25rem;
+  height: 34vh;
+  padding: 2.5rem var(--main-gap);
+  border-radius: var(--main-gap);
 
-  background: #fff;
+  background-color: #fff;
   border: 2px solid #e7e7e7;
 
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .service-icon {
@@ -52,19 +51,19 @@
 }
 
 .service1:hover {
-  border: 3px solid #42b7ca;
+  border: 2px solid #42b7ca;
 }
 
 .service2:hover {
-  border: 3px solid #425fca;
+  border: 2px solid #425fca;
 }
 
 .service3:hover {
-  border: 3px solid #9c42ca;
+  border: 2px solid #9c42ca;
 }
 
 .home-service:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .home-service h4 {
@@ -75,31 +74,82 @@
 }
 
 .home-service p {
-  margin: 1rem 0;
+  margin: 1rem 0.25rem;
 
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
 .home-carousel-slogan {
-  margin: 6.25rem;
+  margin: 6.25rem auto;
+  padding: 0 0.5rem;
 }
 
 .pl-flag {
-  width: auto;
   height: 2.5rem;
   margin-left: 0.8rem;
 }
 
 .home-carousel {
-  width: 100%;
+  width: calc(100vw - 3rem);
 }
 
 .home-forms-section {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 2rem;
 
-  min-height: 62vh;
-  padding: 4.5rem;
+  padding: 4rem 0;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home-typewriter {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .home-typewriter {
+    font-size: var(--main-gap);
+  }
+
+  .home-services {
+    flex-direction: column;
+  }
+
+  .home-service {
+    height: fit-content;
+    width: 90%;
+  }
+
+  .home-service p {
+    font-size: 1.1rem;
+  }
+
+  .home-forms-section {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-carousel > div:last-of-type {
+    width: 70vw;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 599px) {
+  .home-typewriter {
+    font-size: 1rem;
+  }
+
+  .home-carousel > div:last-of-type {
+    width: 85vw;
+  }
+
+  .home-service {
+    width: 100%;
+  }
 }

@@ -1,11 +1,9 @@
 .food-container {
-  position: relative;
-
   flex-basis: 45%;
 
+  border-radius: var(--main-gap);
   margin: 2rem;
-  border-radius: 1.25rem;
-  padding: 1rem;
+  padding: 0.75rem;
 
   background-color: #dfd855;
 
@@ -20,7 +18,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
 
-.food-container > .form-group > h2 {
+.food-container > h2 {
   width: 100%;
 
   text-align: center;
@@ -31,60 +29,89 @@
   color: brown;
 }
 
-.food-detail {
-  position: absolute;
-  text-align: center;
-  font-weight: 600;
-  min-width: 15%;
-  line-height: 2.5rem;
-  padding: 0 0.5rem;
+.form-group.food-overview {
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0;
+
+  background-color: #e6e6fa;
 }
 
-.food-price {
-  bottom: 12%;
-  left: 0;
-  background-color: #ff6b21;
+.food-detail {
+  min-width: 15%;
+  padding: 0 0.5rem;
+  margin: 0;
+
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+.food-detail:first-of-type {
+  background-color: var(--main-orange-color);
 }
 
 .food-quantity {
-  bottom: 0;
-  left: 0;
   background-color: #bb86fc;
-  border-bottom-right-radius: 1rem;
+
+  transition: transform 0.2s;
 }
 
-.food-category {
-  top: 18%;
-  right: 0;
+.food-quantity.animate {
+  transform: scale(1.2);
+}
+
+.food-detail:last-of-type {
   background-color: #ffdbac;
-  border-top-left-radius: 1rem;
-  border: 1px solid black;
 }
 
 .food-container > .form-group > img {
-  width: 50%;
+  width: 45%;
+  border-radius: 0.75rem;
+  padding: 0.1rem;
 }
 
 .food-info {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   flex-direction: column;
 
-  padding: 1.25rem 0.8rem;
-
-  text-align: center;
+  padding: 0.5rem 0.1rem 0 0.5rem;
 }
 
-.food-info:last-child {
+.food-info p {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
   font-weight: 600;
+
+  background-color: #e6e6fa;
 }
 
-.buy-btn:hover {
-  background-color: #ff6b21;
+.food-info .form-btn:hover {
+  background-color: var(--main-orange-color);
 }
 
-.buy-btn[disabled] {
+.food-info .form-btn[disabled] {
   background-color: #4a78a8;
-  cursor: not-allowed;
+}
+
+@media (max-width: 599px) {
+  .food-detail {
+    font-size: 0.75rem;
+  }
+
+  .food-container {
+    margin: var(--main-gap) auto;
+  }
+
+  .food-container > .form-group:last-of-type {
+    flex-direction: column;
+  }
+
+  .food-info p {
+    font-size: 0.75rem;
+  }
+
+  .food-container > .form-group > img {
+    width: 65%;
+  }
 }

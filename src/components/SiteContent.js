@@ -3,11 +3,11 @@ import "../assets/styles/SiteContent.css";
 import React, { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 
-import About from "../pages/About";
-import Cart from "../pages/Cart";
-import Home from "../pages/Home";
-import Menu from "../pages/Menu";
-import UserProfile from "../pages/UserProfile";
+import About from "../pages/AboutPage";
+import Cart from "../pages/CartPage";
+import Home from "../pages/HomePage";
+import Menu from "../pages/MenuPage";
+import UserProfile from "../pages/UserProfilePage";
 
 function SiteContent() {
   const location = useLocation();
@@ -35,6 +35,7 @@ function SiteContent() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/account" element={<UserProfile />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );

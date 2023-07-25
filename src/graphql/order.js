@@ -25,7 +25,8 @@ export const UPDATE_ORDER_MUTATION = gql`
 export const REMOVE_ORDER_MUTATION = gql`
   mutation RemoveOrder($orderId: Int!) {
     removeOrder(orderId: $orderId) {
-      id
+      orderId
+      deletedFoodIds
     }
   }
 `;

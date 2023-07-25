@@ -40,6 +40,15 @@ export const REGISTER_USER_MUTATION = gql`
   }
 `;
 
+export const UPDATE_USER_DATA_MUTATION = gql`
+  mutation UpdateUserData($input: UpdateUserInput!) {
+    updateUserData(input: $input) {
+      id
+      email
+    }
+  }
+`;
+
 export const GET_USER_QUERY = gql`
   query GetUser($userId: Int!) {
     getUser(userId: $userId) {

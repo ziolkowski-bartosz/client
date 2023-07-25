@@ -1,73 +1,124 @@
 .footer-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+
   flex-direction: column;
 
   width: 100%;
-  height: 20rem;
-  padding: 4rem 0 2.5rem 0;
+  min-height: 20rem;
+  margin-top: var(--main-gap);
+  padding: 2rem 0 0 0;
 
   background-color: #121619;
   color: #cacdd2;
 }
 
 .footer-logo {
-  width: 10%;
-  margin-bottom: 1.8rem;
+  width: 11%;
+}
+
+.footer-address {
+  margin: 1.5rem var(--main-gap);
+
+  text-align: center;
 }
 
 .footer-socials {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  width: 10%;
+  width: 14%;
   padding: 0;
-
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.footer-socials a {
-  color: #fff;
-
-  text-decoration: none;
-}
-
-.footer-socials a i {
-  margin-right: 1rem;
-
+.footer-container a i {
   font-size: 1.1rem;
 
-  transition: color 0.4s ease;
+  transition: 0.2s;
 }
 
 .footer-contact {
   display: flex;
   justify-content: space-around;
 
-  width: 15%;
-}
-
-.footer-contact a {
-  color: #fff;
-
-  text-decoration: none;
-}
-
-.footer-contact a i {
-  font-size: 1.1rem;
-
-  transition: color 0.4s ease;
+  width: 25%;
+  margin-top: var(--main-gap);
 }
 
 .footer-slogan {
-  margin-top: 1.1rem;
+  margin-top: var(--main-gap);
+
   font-family: Pacifico, sans-serif;
   font-size: 1.5rem;
 
-  color: #ff6b21;
+  color: var(--main-orange-color);
 }
 
-a:hover i {
-  color: #ff6b21;
+@media (min-width: 992px) and (max-width: 1199px) {
+  .footer-logo {
+    width: 12%;
+  }
+
+  .footer-socials {
+    width: 15%;
+  }
+  .footer-contact {
+    width: 35%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-logo {
+    width: 18%;
+  }
+  .footer-socials {
+    width: 20%;
+  }
+  .footer-contact {
+    width: 45%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .footer-logo {
+    width: 20%;
+  }
+  .footer-socials {
+    width: 22%;
+  }
+  .footer-contact {
+    width: 60%;
+  }
+}
+
+@media (max-width: 599px) {
+  .footer-logo {
+    width: 35%;
+  }
+  .footer-socials {
+    width: 38%;
+  }
+  .footer-contact {
+    width: 75%;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-logo {
+    width: 45%;
+  }
+  .footer-socials {
+    width: 48%;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
 }

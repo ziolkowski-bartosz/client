@@ -2,14 +2,16 @@ import "../assets/styles/Footer.css";
 
 import { Link } from "react-router-dom";
 import React from "react";
-import polenixLogo from "../assets/images/polenixLogo.png";
+import polenixLogo from "../assets/images/polenixLogo.jpg";
 
 function Footer() {
   return (
     <div className="footer-container">
       <img className="footer-logo" src={polenixLogo} alt="polenix logo" />
-      <p>Anker Engelunds Vej 1 Bygning 101A, 2800 Kgs. Lyngby</p>
-      <ul class="footer-socials">
+      <p className="footer-address">
+        Anker Engelunds Vej 1 Bygning 101A, 2800 Kgs. Lyngby
+      </p>
+      <ul className="footer-socials">
         <li>
           <Link to="/">
             <i className="fa fa-facebook"></i>

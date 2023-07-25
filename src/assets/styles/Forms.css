@@ -1,5 +1,5 @@
 .form-slogan {
-  margin-bottom: 1.25rem;
+  margin: var(--main-gap) 0;
 
   font-family: "Pacifico", sans-serif;
   text-align: center;
@@ -8,115 +8,246 @@
   color: brown;
 }
 
+.user-slogan {
+  margin: var(--main-gap) auto;
+  border-radius: var(--main-gap);
+
+  font-size: 3rem;
+  line-height: 5.5rem;
+
+  background-color: #e6e6fa;
+}
+
+.info-listing-slogan {
+  width: 50vw;
+  border-radius: var(--main-gap);
+  margin: 0;
+
+  line-height: 5.5rem;
+
+  background-color: #e6e6fa;
+}
+
+.fadeIn > .user-slogan {
+  width: 90vw;
+}
+
 .form-group {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+
+  margin: 0.25rem auto;
 
   width: 100%;
-}
-
-.form-label {
-  width: 25%;
+  max-width: 100%;
 }
 
 .form-input {
-  width: 50%;
+  width: 70%;
+}
+
+.form-control {
+  width: 90%;
+}
+
+.form-label {
+  margin: 0;
+  width: 20%;
+
+  text-align: center;
+}
+
+.form-warning {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  color: red;
+}
+
+.form-success {
+  margin-bottom: 0.25rem;
+  color: green;
 }
 
 .form-btn {
-  display: inline-block;
-
-  padding: 0 1.25rem;
-  min-width: 6vw;
+  width: fit-content;
+  min-height: 5vh;
   border-radius: 2.5rem;
-
-  font-weight: bold;
-  text-align: center;
-  font-family: Helvetica, sans-serif;
-  line-height: 2.5rem;
+  margin: 0.5rem 0.25rem;
+  padding: 0.5rem var(--main-gap);
 
   background-color: #4a78a8;
   box-shadow: #422800 4px 4px 0 0;
   color: white;
   border: 2px solid #422800;
-
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-.submit-btn:hover {
+.form-btn:disabled {
+  background-color: grey;
+}
+
+.form-btn:not([disabled]):hover {
   background-color: #bb86fc;
-  color: white;
 }
 
 .reset-btn:hover {
   background-color: grey;
 }
 
-.form-warning {
-  display: inline-block;
-  margin-bottom: 0.25rem;
+.search-btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: 0;
 
-  font-size: 0.75rem;
-  text-align: center;
-
-  color: red;
+  box-shadow: none;
+  background-color: #0e7490;
 }
 
 .form-background {
   position: absolute;
+
   top: 4rem;
   left: 0;
-  z-index: 9;
-
-  width: 100%;
-  height: 100vh;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
 
   background: rgba(0, 0, 0, 0.7);
-  opacity: 1;
 
   transition: 0.3s;
 }
 
 .form-background.hide {
-  z-index: -15;
-
+  z-index: -1;
   opacity: 0;
 }
 
-.popup-form {
+.form-exit-btn {
   position: absolute;
-  left: 50%;
-  z-index: 10;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 2rem;
 
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  display: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--main-gap);
 
-  padding: 1.25rem;
-  border-radius: 1.25rem;
+  background-color: red;
 
-  background-color: #dbcf5c;
-  color: black;
-
-  transform: translateX(-50%);
+  cursor: pointer;
 }
 
-.inbuilt-form {
+.form-exit-btn.active {
+  display: inline;
+}
+
+.form,
+form {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
 
-  width: 40%;
-  min-height: 45vh;
-  padding: 1.25rem;
-  border-radius: 1.25rem;
-
-  font-family: "Pacifico", sans-serif;
-  text-align: center;
+  border-radius: var(--main-gap);
+  padding: var(--main-gap) 0.8rem 0.5rem 0.8rem;
 
   background-color: #dbcf5c;
-  color: brown;
+}
+
+.popup-form {
+  position: relative;
+  top: 22vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 40%;
+
+  padding-top: 0.8rem;
+
+  color: black;
+}
+
+.inbuilt-form {
+  width: 42%;
+  min-height: 50vh;
+}
+
+@media (max-width: 1199px) {
+  .popup-form {
+    width: 70%;
+  }
+
+  .form-slogan,
+  .food-listing-slogan {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .form-exit-btn {
+    display: inline;
+  }
+
+  .inbuilt-form {
+    width: 80%;
+  }
+
+  .info-listing-slogan {
+    line-height: normal;
+    width: 80vw;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .popup-form {
+    width: 60%;
+  }
+
+  .form-slogan,
+  .food-listing-slogan {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .form-slogan,
+  .food-listing-slogan {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .form-slogan,
+  .food-listing-slogan {
+    font-size: 1.5rem;
+  }
+
+  .popup-form,
+  .inbuilt-form {
+    width: 90%;
+  }
+
+  .popup-form > .form-group:not(:last-child) {
+    flex-direction: column;
+  }
+
+  .form-label {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-input {
+    width: 90%;
+  }
+}
+
+@media (max-width: 300px) {
+  .popup-form > .form-group:last-child {
+    flex-direction: column;
+  }
+
+  .form-slogan,
+  .food-listing-slogan {
+    font-size: 1rem;
+  }
 }

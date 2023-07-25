@@ -32,6 +32,9 @@ export const REMOVE_ORDER_ITEM_MUTATION = gql`
   mutation RemoveOrderItem($orderItemId: Int!) {
     removeOrderItem(orderItemId: $orderItemId) {
       id
+      food {
+        id
+      }
     }
   }
 `;

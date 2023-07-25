@@ -1,10 +1,13 @@
 .header {
   height: 55vh;
+  width: 100vw;
 
   background: linear-gradient(90deg, #f4a139 50%, #f1592a 50%);
 }
 
 .header-container {
+  position: relative;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -12,15 +15,110 @@
   height: calc(100% - 4.4rem);
 }
 
-.header-img {
-  width: 20%;
+.header-container > div {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+  height: 100%;
 }
 
-.header-slogan {
-  width: 27%;
-  border-radius: 1.25rem;
+.header-container > div:first-child {
+  left: 0;
+  padding-left: 1rem;
+}
+
+.header-container > div:last-child {
+  right: 0;
+  padding-right: 1rem;
+}
+
+.header-img {
+  height: 90%;
+  border-radius: 50%;
+}
+
+.form-slogan.header-slogan {
+  z-index: 1;
+
+  min-width: 30%;
+  padding: 0.5rem;
+  border-radius: var(--main-gap);
 
   line-height: 7.5vh;
 
   background-color: #dfd855;
+}
+
+@media (max-width: 1199px) {
+  .header-container:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(90deg, #f4a139 50%, #f1592a 50%);
+
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 991px) {
+  .form-slogan.header-slogan {
+    font-size: 1.4rem;
+    line-height: normal;
+  }
+
+  .header-container > div {
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .header-container > div:first-child {
+    padding: 0;
+  }
+
+  .header-container > div:last-child {
+    padding: 0;
+  }
+
+  .header-img {
+    height: 85%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-slogan.header-slogan {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) and (orientation: landscape) {
+  .header-container > div:first-child {
+    justify-content: flex-start;
+    margin-left: 2.5rem;
+  }
+
+  .header-container > div:last-child {
+    justify-content: flex-end;
+    margin-right: 2.5rem;
+  }
+
+  .header-img {
+    height: 88%;
+  }
+}
+
+@media (max-width: 350px) {
+  .form-slogan.header-slogan {
+    font-size: 1rem;
+  }
 }

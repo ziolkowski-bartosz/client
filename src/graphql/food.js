@@ -46,3 +46,17 @@ export const GET_SINGLE_FOOD_QUERY = gql`
     }
   }
 `;
+
+export const GET_FOOD_BY_CATEGORY_QUERY = gql`
+  query GetFoodByCategory($categoryId: Int!) {
+    getFoodByCategory(categoryId: $categoryId) {
+      id
+      name
+      price
+      quantity
+      category {
+        name
+      }
+    }
+  }
+`;

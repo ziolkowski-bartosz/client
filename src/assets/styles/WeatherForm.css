@@ -1,27 +1,26 @@
 .weather-widget-input {
   width: 75%;
-
-  font-family: Helvetica, sans-serif;
 }
 
 .weather-widget-info-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
 
-  width: 80%;
-  min-height: 22vh;
-  margin-top: 1.25rem;
-  border-radius: 1.25rem;
+  width: 90%;
+  min-height: 26vh;
+  margin: var(--main-gap) 0;
+  border-radius: var(--main-gap);
 
   background-color: #ffdbac;
 }
 
-.weather-widget-notice {
-  line-height: 22vh;
-  margin: 0;
-}
-
 .weather-icon {
   width: 5rem;
+}
+
+@media (max-width: 400px) {
+  .form-group.search-weather {
+    flex-direction: column;
+  }
 }

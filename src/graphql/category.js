@@ -9,9 +9,9 @@ export const CREATE_CATEGORY_MUTATION = gql`
   }
 `;
 
-export const GET_ALL_CATEGORIES_QUERY = gql`
-  query GetAllCategories {
-    getAllCategories {
+export const GET_SINGLE_CATEGORY_QUERY = gql`
+  query GetSingleCategory($categoryId: Int!) {
+    getSingleCategory(categoryId: $categoryId) {
       id
       name
       food {
@@ -23,9 +23,9 @@ export const GET_ALL_CATEGORIES_QUERY = gql`
   }
 `;
 
-export const GET_SINGLE_CATEGORY_QUERY = gql`
-  query GetSingleCategory($categoryId: Int!) {
-    getSingleCategory(categoryId: $categoryId) {
+export const GET_ALL_CATEGORIES_QUERY = gql`
+  query GetAllCategories {
+    getAllCategories {
       id
       name
       food {

@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/styles/index.css";
 
 import { ApolloProvider } from "@apollo/client";
 import App from "./App";
