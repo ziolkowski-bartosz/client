@@ -23,7 +23,7 @@ const OrderItem = (props) => {
         {props.orderItem.quantity}
       </p>
       <div
-        className={`inline-flex rounded-md shadow-sm ${
+        className={`inline-flex shadow-sm ${
           props.orderStatus === "DRAFT"
             ? "order-item-buttons"
             : "order-item-buttons hidden"
