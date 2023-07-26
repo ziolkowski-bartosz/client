@@ -2,7 +2,7 @@
 
 This is a concept for a web application designed for a potential Polish restaurant in Copenhagen, developed using React.js and Node.js.
 
-To see how the app works, please watch the video available [_here_](https://youtu.be/jQvGdUtV6qg).
+[Click here to open live demo](https://polenix-4ee0a.web.app/)
 
 ## Table of Contents
 
