@@ -1,12 +1,7 @@
 {
   "hosting": {
     "public": "build",
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
+
     "predeploy": ["npm install"],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
