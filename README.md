@@ -78,15 +78,25 @@ This is a concept application designed for a potential Polish restaurant in Cope
 
 ## Screenshots
 
-|      ![Top of Home Page](./README_img/homeTopScreen.png)       |
+|      ![Top of Home Page](https://i.ibb.co/LZ8sQTR/home-Page-Top.png)               |
 | :------------------------------------------------------------: |
 |                       _Top of Home Page_                       |
-|      ![Bottom of Home Page](./README_img/homeBottom.png)       |
+|      ![Middle of Home Page](https://i.ibb.co/82PbDKs/home-Page-Middle.png)            |
+|                     _Middle of Home Page_                      |
+|      ![Bottom of Home Page](https://i.ibb.co/XFFXjdS/home-Page-Bottom.png)       |
 |                     _Bottom of Home Page_                      |
-|         ![About us Page](./README_img/aboutScreen.png)         |
-|                        _About us Page_                         |
-| ![Restaurant Menu Page](./README_img/restaurantMenuScreen.png) |
-|                     _Restaurant Menu Page_                     |
+|         ![Top of 'About us' Page](https://i.ibb.co/x7N8ZyJ/about-Page-Top.png)         |
+|                        _Top of 'About us' Page_                         |
+| ![Bottom of 'About us' Page](https://i.ibb.co/kBxGm7k/about-Page-Bottom.png) |
+|                     _Bottom of 'About us' Page_                   |
+| ![Top of Menu Page](https://i.ibb.co/xY9j2kL/menu-Page-Top.png) |
+|                     _Top of Menu Page_                     |
+| ![Top of Cart Page](https://i.ibb.co/VjM35pD/cart-Page-Top.png) |
+|                     _Top of Cart Page_                     |
+| ![Middle of Cart Page](https://i.ibb.co/jTMbkFZ/cart-Page-Middle.png) |
+|                     _Middle of Cart Page_                     |
+| ![Top of User Account Page](https://i.ibb.co/Qb3sbQb/account-Page-Top.png) |
+|                     _Top of User Account Page_                     |
 
 ## Local Setup
 
