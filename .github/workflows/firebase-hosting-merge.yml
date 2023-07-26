@@ -8,9 +8,9 @@ name: Deploy to Firebase Hosting on merge
       - firebase-deploy
 
 env:
-  REACT_APP_SERVICE_ID: ${{ secrets.POLENIX_REACT_APP_SERVICE_ID }}
-  REACT_APP_TEMPLATE_ID: ${{ secrets.POLENIX_REACT_APP_TEMPLATE_ID }}
-  REACT_APP_USER_ID: ${{ secrets.POLENIX_REACT_APP_USER_ID }}
+  REACT_APP_SERVICE_ID: "${{ secrets.POLENIX_REACT_APP_SERVICE_ID }}"
+  REACT_APP_TEMPLATE_ID: "${{ secrets.POLENIX_REACT_APP_TEMPLATE_ID }}"
+  REACT_APP_USER_ID: "${{ secrets.POLENIX_REACT_APP_USER_ID }}"
   REACT_APP_APOLLO_URL: ${{ secrets.POLENIX_REACT_APP_APOLLO_URL }}
 
 jobs:
