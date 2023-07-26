@@ -43,10 +43,10 @@ function ContactForm() {
       message,
     };
     await emailjs.send(
-      functions.config().polenix.reactapp.service_id,
-      functions.config().polenix.reactapp.template_id,
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
       templateParams,
-      functions.config().polenix.reactapp.user_id
+      process.env.REACT_APP_USER_ID
     );
     reset();
     formSuccess();
