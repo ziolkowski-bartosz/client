@@ -1,20 +1,22 @@
 # "Polenix" - web application
 
-This is a concept for a web application designed for a potential Polish restaurant in Copenhagen, developed using React.js and Node.js.
+This is a concept for single-page web application designed for a potential Polish restaurant in Copenhagen, developed using React.js and Node.js.
 
 <a href="https://polenix-4ee0a.web.app/" target="_blank">Click here to open live demo</a>
 
 ## Table of Contents
 
-- [General Info](#general-information)
+- [General Info](/#general-information)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [Setup](#setup)
+- [Local Setup](#local-setup)
 - [Project Status](#project-status)
-- [Room for Improvement](#room-for-improvement)
+- [Future Work](#future-work)
 
 ## General Information
+
+<a name="general-information"></a>
 
 - As an avid cook and enthusiast of Polish cuisine, I've collected several pictures of dishes, including many traditional Polish recipes, in my photo gallery. Combined with my love for Copenhagen, I decided to turn this into a web application, which resulted in the project you see here.
 
@@ -27,28 +29,40 @@ This is a concept for a web application designed for a potential Polish restaura
 ## Technologies Used
 
 - Frontend
-  - JavaScript
-  - HTML
-  - CSS
-  - Bootstrap
-  - Styled Components
-  - Font Awesome
-  - Typewriter.js
-  - React.js
-  - Apollo Client
-  - GraphQL
-  - JWT Decode
-  - Email.js
+  - Languages and Frameworks
+    - JavaScript
+    - HTML
+    - React.js
+  - Forms
+    - React Hook Form
+    - Formik 
+  - API Calls
+    - GraphQL (Apollo)
+  - Styling
+    - Tailiwind CSS
+    - CSS
+    - Styled Components
+    - Styled JSX
+    - Bootstrap
+  - Authentication Strategy
+    - Jsonwebtoken
+  - Deployment
+    - Firebase
+      
 - Backend (go to the [backend repository](https://github.com/bart-ziolkowski/Polenix_server))
-  - JavaScript
-  - Node.js
-  - Express.js
-  - Apollo Server
-  - GraphQL
-  - Bcrypt.js
-  - Jsonwebtoken
-  - Sequelize
-  - MySQL
+  - Languages and Frameworks
+    - JavaScript
+    - Node.js
+    - Express.js
+  - API Client
+    - GraphQL (Apollo)
+  - Authentication
+    - Jsonwebtoken
+  - Database and ORM
+    - Sequelize
+    - MySQL
+  - Deployment
+    - Heroku
 
 ## Features
 
@@ -57,9 +71,12 @@ This is a concept for a web application designed for a potential Polish restaura
 - contact form
 - photo galleries in the form of a slideshow
 - browsing the list of today's dishes
+- ordering meals
+- access to order history
 - account creation
 - login and logout
 - validation of forms
+- responsiveness
 
 ## Screenshots
 
@@ -73,7 +90,7 @@ This is a concept for a web application designed for a potential Polish restaura
 | ![Restaurant Menu Page](./README_img/restaurantMenuScreen.png) |
 |                     _Restaurant Menu Page_                     |
 
-## Setup
+## Local Setup
 
 - You must have a MySQL database and Node.js installed on the device.
 - You will find the dependencies for the frontend in this repository in the package.json file.
@@ -83,8 +100,7 @@ This is a concept for a web application designed for a potential Polish restaura
 
 1. Create a database in MySQL.
 2. Create a folder called e.g. "Polenix" and navigate to it in the terminal.
-3. Create two subfolders: "Polenix_client" and "Polenix_server".
-4. Navigate to "Polenix_client" folder and clone the frontend repository to the "Polenix_client" folder:
+3. Clone the frontend repository:
 
 ```
 git clone https://github.com/bart-ziolkowski/Polenix_client.git
@@ -103,7 +119,7 @@ npm install
    - REACT_APP_USER_ID
    - REACT_APP_APOLLO_URL
 
-7. Navigate to "Polenix_server" folder and clone the backend repository to the "Polenix_server" folder:
+7. Navigate to "Polenix" folder and clone the backend repository:
 
 ```
 git clone https://github.com/bart-ziolkowski/Polenix_server.git
@@ -137,22 +153,10 @@ npm start
 
 ## Project Status
 
-Project is in progress.
+In this moment, the project is in a finished phase, but there is still room for improvement.
 
-## Room for Improvement
+## Future Work
 
-To improve:
-
-- the database is already adapted for user management, it only remains to implement access to the appropriate functions depending on the role "CUSTOMER", "ADMIN" and "EMPLOYEE"
-- allow users with the role of "EMPLOYEE" to add dishes and browse orders
+- allow users with the role of "EMPLOYEE" to manage dishes and orders
+- integrate app with CMS
 - allow users with the role of "ADMIN" to manage users
-- expand food with a description and a photo
-- improve information about the dishes
-- replace CSS with SCSS for better readability, among other things
-- design improvement and correction of the user's cart and profile
-
-To do:
-
-- add responsiveness
-- add dishes to the cart to purchase orders
-- app deployment
