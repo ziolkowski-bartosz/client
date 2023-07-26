@@ -2,10 +2,17 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-'on':
+"on":
   push:
     branches:
       - firebase-deploy
+
+env:
+  REACT_APP_SERVICE_ID: ${{ secrets.POLENIX_REACT_APP_SERVICE_ID }}
+  REACT_APP_TEMPLATE_ID: ${{ secrets.POLENIX_REACT_APP_TEMPLATE_ID }}
+  REACT_APP_USER_ID: ${{ secrets.POLENIX_REACT_APP_USER_ID }}
+  REACT_APP_APOLLO_URL: ${{ secrets.POLENIX_REACT_APP_APOLLO_URL }}
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -14,7 +21,7 @@ jobs:
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_POLENIX_4EE0A }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_POLENIX_4EE0A }}"
           channelId: live
           projectId: polenix-4ee0a
