@@ -1,6 +1,6 @@
-# "Polenix" - web application
+# "Polenix" - full-stack single-page web application
 
-This is a concept for single-page web application designed for a potential Polish restaurant in Copenhagen, developed using React.js and Node.js.
+This is a concept application designed for a potential Polish restaurant in Copenhagen, developed using React.js and Node.js.
 
 <a href="https://polenix-4ee0a.web.app/" target="_blank">Click here to open live demo</a>
 
@@ -15,8 +15,6 @@ This is a concept for single-page web application designed for a potential Polis
 - [Future Work](#future-work)
 
 ## General Information
-
-<a name="general-information"></a>
 
 - As an avid cook and enthusiast of Polish cuisine, I've collected several pictures of dishes, including many traditional Polish recipes, in my photo gallery. Combined with my love for Copenhagen, I decided to turn this into a web application, which resulted in the project you see here.
 
