@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { GrClose } from "react-icons/gr";
 import { REGISTER_USER_MUTATION } from "../../graphql/user";
+import { hashPassword } from "../../utils/hashPassword";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@apollo/client";
 import { userDataValidation } from "../../utils/userDataValidation";
@@ -35,10 +36,14 @@ function RegisterForm(props) {
     }
   );
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    const hashedPassword = await hashPassword(data.password);
     registerUser({
       variables: {
-        input: { ...data },
+        input: {
+          ...data,
+          password: hashedPassword,
+        },
       },
     });
   };
@@ -50,9 +55,7 @@ function RegisterForm(props) {
   };
 
   return (
-    <div
-      className={`${isRegisterFormOpen ? "" : "hide"} form-background`}
-    >
+    <div className={`${isRegisterFormOpen ? "" : "hide"} form-background`}>
       <form className="popup-form" onSubmit={handleSubmit(onSubmit)}>
         <h2 className="form-slogan">Join us foodie!</h2>
         <GrClose className="form-exit-btn" onClick={toggleRegisterForm} />
