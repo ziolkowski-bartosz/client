@@ -3,7 +3,6 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
 import { GrClose } from "react-icons/gr";
 import { LOGIN_USER_MUTATION } from "../../graphql/user";
-import { hashPassword } from "../../utils/helpFunctions";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@apollo/client";
 import { userDataValidation } from "../../utils/userDataValidation";
@@ -31,9 +30,8 @@ function LoginForm(props) {
     },
   });
 
-  const onSubmit = async (data) => {
-    const hashedPassword = await hashPassword(data.password);
-    loginUser({ variables: { email: data.email, password: hashedPassword } });
+  const onSubmit = (data) => {
+    loginUser({ variables: { ...data } });
   };
 
   const handleResetForm = () => {
