@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { GrClose } from "react-icons/gr";
 import { REGISTER_USER_MUTATION } from "../../graphql/user";
-import { hashPassword } from "../../utils/hashPassword";
+import { hashPassword } from "../../utils/helpFunctions";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@apollo/client";
 import { userDataValidation } from "../../utils/userDataValidation";
