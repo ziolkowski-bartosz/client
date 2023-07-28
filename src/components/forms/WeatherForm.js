@@ -12,7 +12,7 @@ function WeatherWidget() {
     getWeather,
     { data = null, loading: weatherLoading, error: weatherError },
   ] = useLazyQuery(GET_WEATHER_QUERY, {
-    variables: { cityName: cityInputRef.current?.value },
+    variables: { cityName: cityInputRef.current?.value.trim() },
   });
 
   return (
