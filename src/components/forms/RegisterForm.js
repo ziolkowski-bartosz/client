@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import { GrClose } from "react-icons/gr";
 import { REGISTER_USER_MUTATION } from "../../graphql/user";
-import { hashPassword } from "../../utils/helpFunctions";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@apollo/client";
 import { userDataValidation } from "../../utils/userDataValidation";
@@ -36,13 +35,11 @@ function RegisterForm(props) {
     }
   );
 
-  const onSubmit = async (data) => {
-    const hashedPassword = await hashPassword(data.password);
+  const onSubmit = (data) => {
     registerUser({
       variables: {
         input: {
           ...data,
-          password: hashedPassword,
         },
       },
     });
