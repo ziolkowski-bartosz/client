@@ -63,7 +63,7 @@ const UserProfile = () => {
         </>
       ) : (
         <p className="user-profile-listing">
-          {!user ? "Login first" : loading ? "Loading..." : "Refresh page"}
+          {!user ? "Login first" : loading ? "Loading..." : "Failed to fetch"}
         </p>
       )}
     </div>

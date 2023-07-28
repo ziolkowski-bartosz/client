@@ -19,7 +19,7 @@
 
 .home-services {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: var(--main-gap);
 
   min-height: 33vh;
@@ -34,7 +34,6 @@
   flex-direction: column;
   flex-grow: 1;
 
-  height: 34vh;
   padding: 2.5rem var(--main-gap);
   border-radius: var(--main-gap);
 
@@ -118,11 +117,6 @@
     flex-direction: column;
   }
 
-  .home-service {
-    height: fit-content;
-    width: 90%;
-  }
-
   .home-service p {
     font-size: 1.1rem;
   }
@@ -149,7 +143,7 @@
     width: 85vw;
   }
 
-  .home-service {
-    width: 100%;
+  .home-services {
+    padding: 0 1rem;
   }
 }
