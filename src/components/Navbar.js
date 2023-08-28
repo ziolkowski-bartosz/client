@@ -94,6 +94,9 @@ function Navbar() {
         <Link to="/" onClick={isMobileMenuOpen && toggleMobileMenu}>
           Home
         </Link>
+        <Link to="/easycargo" onClick={isMobileMenuOpen && toggleMobileMenu}>
+          EasyCargo
+        </Link>
         <Link to="/about" onClick={isMobileMenuOpen && toggleMobileMenu}>
           About Polenix
         </Link>

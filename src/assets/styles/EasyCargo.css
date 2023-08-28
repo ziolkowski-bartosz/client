@@ -1,0 +1,30 @@
+.easycargo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin: 20px;
+  min-width: 85vw;
+  min-height: 80vh;
+
+  background-image: url("../images/backgrounds/restaurantBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.easycargo-table {
+  margin: 20px;
+  border-collapse: collapse;
+}
+
+.easycargo-table th,
+.easycargo-table td {
+  border: 1px solid black;
+  padding: 8px;
+
+  background-color: #dbcf5c;
+
+  text-align: left;
+}

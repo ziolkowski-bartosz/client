@@ -5,6 +5,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 
 import About from "../pages/AboutPage";
 import Cart from "../pages/CartPage";
+import EasyCargo from "../pages/EasyCargoPage";
 import Home from "../pages/HomePage";
 import Menu from "../pages/MenuPage";
 import UserProfile from "../pages/UserProfilePage";
@@ -31,6 +32,7 @@ function SiteContent() {
     >
       <Routes location={displayLocation}>
         <Route path="/" element={<Home />} />
+        <Route path="/easycargo" element={<EasyCargo />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/cart" element={<Cart />} />
